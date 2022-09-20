@@ -554,7 +554,7 @@ html,body{
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
-        z-index: 99000;
+        z-index: 9;
     }
     .heading{
         font-size: 8vw;
@@ -608,6 +608,11 @@ html,body{
     }
     #image3{
         display: none;
+    }
+    #page1 #image3:hover {
+        cursor: none;
+        margin-top: 0px;
+        padding: 0%;
     }
 /* ---------------Page 2 Responsive----------- */
 /* ---------------Page 2 Responsive----------- */
@@ -675,7 +680,6 @@ html,body{
         width: 100vw;
         height: 50vh;
         display: flex;
-        background-color: #1EEB8F;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 20px 20px 10px 30px;
