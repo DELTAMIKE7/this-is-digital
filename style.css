@@ -20,19 +20,53 @@ html,body{
 }
 #nav{
     position: fixed;
-    height: 12vh;
+    height: 11vh;
     width: 100vw;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    background-color: rgb(147, 91, 91);
+    background-color: #fff;
 }
 #logo h1{
     font-size: 2.2vw;
     font-weight: 100;
 }
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 /* ---------------Menubar open-------- */
 /* ---------------Menubar open-------- */
 /* ---------------Menubar open-------- */
@@ -85,14 +119,15 @@ html,body{
 /* ---------------Menubar open-------- */
 /* ---------------Services open-------- */
 /* ---------------Services open-------- */
-/* #servicesopen{
+ #servicesopen{
     width: 100%;
     height: 260px;
-    background-color: #fff;
+    background-color: rgb(156, 42, 42);
+    /* position: fixed; */
     position: fixed;
     top: 12vh;
-    z-index: 999;
-    display: none;
+    z-index: 9999;
+    display: flex;
     opacity: 0;
     align-items: center;
     justify-content: center;
@@ -116,7 +151,7 @@ html,body{
 }
 #servicesopen .sbox a:hover{
     border-bottom: 2px solid  #1EEB8F;
-} */
+} 
 /* -------------Nav -------- */
 /* -------------Nav -------- */
 /* -------------Nav -------- */
@@ -798,7 +833,7 @@ html,body{
         top: 100%; 
     }
     #servicesopen{
-        display: none;
+        display: flex;
     }
     #pg1text{
         background-color: fff;
@@ -1280,12 +1315,12 @@ html,body{
 
 
 
-#page6{
+ #page6{
     height: 70vh;
     width: 100%;
     background-color: blue;
 }
-
+/*
 .swiper {
     width: 50%;
     height: 50%;
@@ -1297,9 +1332,9 @@ html,body{
     width: 100%;
   }
   .swiper-slide{
-    /* background-color: red; */
+    background-color: red;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     font-size: 3rem;
-  }
+  } */

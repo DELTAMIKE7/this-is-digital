@@ -30,14 +30,7 @@ loco();
 
 
 
-
-
-
-
-
-
-
-gsap.from("#page1>#pg1text",{
+gsap.from("#page1 #pg1text",{
     opacity:0,
     duration:1,
     ease: Expo.easeInOut
@@ -191,30 +184,45 @@ clogo=document.querySelector("#clogo")
 ;
 
 
-// if(flag===0){
-//     clogo && ofc1 && c1.addEventListener("mouseover",function(){
-//         card1img.style.width= "scale(1.1)";
-//         flag=1;
-//     })
-// }
-// else{
-//     c1.addEventListener("mouseout",function(){
-//         card1img.style.transform= "scale(0)";
-//         flag=0;
-//     })
-// }
+if(flag===0){
+    clogo && ofc1 && c1.addEventListener("mouseover",function(){
+        card1img.style.width= "scale(1.1)";
+        flag=1;
+    })
+}
+else{
+    c1.addEventListener("mouseout",function(){
+        card1img.style.transform= "scale(0)";
+        flag=0;
+    })
+}
 
-// if(flag===0){
-//     c2.addEventListener("mouseover",function(){
-//         card2img.style.transform= "scale(1.1)";
-//         flag=1;
-//     })
-// }
-// else{
-// c2.addEventListener("mouseout",function(){
-//     card2img.style.transform= "scale(1)";
-//     flag=0;
-// })
-// }
+if(flag===0){
+    c2.addEventListener("mouseover",function(){
+        card2img.style.transform= "scale(1.1)";
+        flag=1;
+    })
+}
+else{
+c2.addEventListener("mouseout",function(){
+    card2img.style.transform= "scale(1)";
+    flag=0;
+})
+}
 
-
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
