@@ -797,7 +797,7 @@ html,body{
         top: 100%; 
     }
     #servicesopen{
-        display: flex;
+        display: none;
     }
     #pg1text{
         background-color: fff;
