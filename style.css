@@ -34,39 +34,6 @@ html,body{
     font-weight: 100;
 }
 
-
-
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 /* ---------------Menubar open-------- */
 /* ---------------Menubar open-------- */
 /* ---------------Menubar open-------- */
@@ -122,17 +89,16 @@ html,body{
  #servicesopen{
     width: 100%;
     height: 260px;
-    background-color: rgb(156, 42, 42);
+    background-color: #fff;
     /* position: fixed; */
     position: fixed;
-    top: 12vh;
+    top: 11vh;
     z-index: 9999;
-    display: flex;
-    opacity: 0;
+    display: none;
     align-items: center;
     justify-content: center;
     border-top: 1px solid #000;
-    transition: opacity .4s ease-in-out ;
+    transition: opacity 1s ease ;
 }
 #servicesopen .sbox{
     height: 200px;
@@ -193,7 +159,8 @@ html,body{
     object-fit: cover;
     object-position: center;
     z-index: 2;
-}
+}/* this is icon arrow */
+
 .greenslide{
     background-color: #1EEB8F;
     width: 100%;
@@ -256,9 +223,10 @@ html,body{
 /* -------------Page 11111111111 -------- */
 /* -------------Page 11111111111 -------- */
 #page1{
-    position: relative;
+    position: relative;     
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 #image1{
     width: 21vw;
@@ -282,13 +250,8 @@ html,body{
     width: 18vw;
     position: absolute;
     right: 7%;
-    bottom: 13%;
+    top: 53%;
     transition: margin 1s ease ;
-}
-#page1 #image3:hover {
-    cursor: pointer;
-    margin-top: -20px;
-    padding: 0%;
 }
 #pg1text{
     width: 50%;
@@ -432,7 +395,8 @@ html,body{
     width: 37vw;
     position: absolute;
     right: 0%;
-    bottom: 0%;
+    /* bottom: 0%; */
+    top: 33%;
     transform: translate(0%,0%);
 }
 #pg-three-right{
@@ -890,10 +854,10 @@ html,body{
     #image1{
         display: flex;
         position: relative;
-        width: 60vh;
-        height: 60vh;
+        width: 50vh;
+        height: 50vh;
         left: 0%;
-        top: 5%;
+        top: 10%;
         transition: margin 1s ease ;
         z-index: 1;
     }
@@ -903,11 +867,14 @@ html,body{
     #image3{
         display: none;
     }
-    #page1 #image3:hover {
+    /* #image3yo:hover{
+        cursor: help;
+    } */
+    /* #page1 #image3:hover {
         cursor: none;
         margin-top: 0px;
         padding: 0%;
-    }
+    } */
 /* ---------------Page 2 Responsive----------- */
 /* ---------------Page 2 Responsive----------- */
     #page2{
@@ -1312,29 +1279,3 @@ html,body{
 
 
 }
-
-
-
- #page6{
-    height: 70vh;
-    width: 100%;
-    background-color: blue;
-}
-/*
-.swiper {
-    width: 50%;
-    height: 50%;
-    background-color: #1EEB8F;
-  }
-
-  .swiper-wrapper{
-    height: 100%;
-    width: 100%;
-  }
-  .swiper-slide{
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-  } */

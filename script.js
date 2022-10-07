@@ -1,5 +1,4 @@
 
-
 function loco(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -27,9 +26,8 @@ ScrollTrigger.refresh();
 loco();
 
 
-
-
-
+// ------------Page 1 Gsap---------
+// ------------Page 1 Gsap---------
 gsap.from("#page1 #pg1text",{
     opacity:0,
     duration:1,
@@ -54,9 +52,10 @@ ab.from("#image1",{
     duration: .8,
     opacity:0
 },`-=.8`)
-
+// ------------Page 2 Gsap---------
+// ------------Page 2 Gsap---------
+// ------------Page 2 Gsap---------
 gsap.from("#page2>h3",{
-
     scrollTrigger:{
         scroller: "#main",
         trigger:"#page2",
@@ -93,33 +92,46 @@ gsap.from("#page2>h2",{
     ease: Expo.easeInOut,
     // skewY:3
 })
-gsap.from("#pg3image1",{
+// ------------Page 3 Gsap---------
+// ------------Page 3 Gsap---------
+gsap.from("#pg3image1,#pg3image2,#pg3image3,#pg3image4,#pg-three-right>h1,#pg-three-right>p,.pg3btn",{
     scrollTrigger:{
-        scroller:"main",
         trigger:"#page3",
-        start:"top 40%",
-        markers:true
+        start:"top 50%",
+        scroller:"#main",
     },
-    y:30,
+    stagger:.2,
+    y:50,
     opacity:0,
-    duration:3,
-    ease: Expo.easeInOut
 })
-gsap.from("#pg-three-right>h1",{
+// --------------------Page 4 Gsap--------------
+// --------------------Page 4 Gsap--------------
+var p4 =gsap.timeline()
+p4.from("#page4>.heading",{
     scrollTrigger:{
-        scroller:"main",
-        trigger:"#page3",
-
-        markers: true,
+        trigger:"#page4",
+        start:"top 60%",
+        scroller:"#main",
     },
-    y:30,
-    opacity:0,
-    duration:3,
-    ease: Expo.easeInOut
+    x: -100,
+    duration:1,
+    opacity:0
 })
-
-
-
+gsap.from("#companies>img",{
+    scrollTrigger:{
+        trigger:"#page4",
+        start:"top 60%",
+        end:"top 20%",
+        scroller:"#main",
+        scrub: true
+    },
+    x: 100,
+    stagger: .001,
+    opacity:0.5,
+})
+// --------------------Page 5 Gsap--------------
+// --------------------Page 5 Gsap--------------
+gsap.from("")
 
 
 var flag=0;
@@ -183,46 +195,31 @@ c2=document.querySelector("#c2"),
 clogo=document.querySelector("#clogo")
 ;
 
-
-if(flag===0){
-    clogo && ofc1 && c1.addEventListener("mouseover",function(){
-        card1img.style.width= "scale(1.1)";
-        flag=1;
-    })
-}
-else{
-    c1.addEventListener("mouseout",function(){
-        card1img.style.transform= "scale(0)";
+function two2imageshover(){
+    if(flag===0){
+        clogo && ofc1 && c1.addEventListener("mouseover",function(){
+            card1img.style.width= "scale(1.1)";
+            flag=1;
+        })
+    }
+    else{
+        c1.addEventListener("mouseout",function(){
+            card1img.style.transform= "scale(0)";
+            flag=0;
+        })
+    }
+    
+    if(flag===0){
+        c2.addEventListener("mouseover",function(){
+            card2img.style.transform= "scale(1.1)";
+            flag=1;
+        })
+    }
+    else{
+    c2.addEventListener("mouseout",function(){
+        card2img.style.transform= "scale(1)";
         flag=0;
     })
+    }
 }
-
-if(flag===0){
-    c2.addEventListener("mouseover",function(){
-        card2img.style.transform= "scale(1.1)";
-        flag=1;
-    })
-}
-else{
-c2.addEventListener("mouseout",function(){
-    card2img.style.transform= "scale(1)";
-    flag=0;
-})
-}
-
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+two2imageshover();
